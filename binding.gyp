@@ -22,7 +22,18 @@
         ['OS=="win"', {
           'msvs_disabled_warnings': [4506],
         }],
-      ],              
+      ],
+    },
+    {
+      'target_name': 'action_after_build',
+      'type': 'none',
+      'dependencies': [ 'glslOptimizer' ],
+      'copies': [
+          {
+            'files': [ '<(PRODUCT_DIR)/glslOptimizer.node' ],
+            'destination': 'lib/'
+          }
+      ]
     }
   ]
 }

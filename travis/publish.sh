@@ -5,7 +5,7 @@ set -e
 # Inspect binary.
 if [ $platform == "linux" ]; then
     ldd ./lib/glslOptimizer.node
-else
+elif [ $platform == "darwin" ]; then
     otool -L ./lib/glslOptimizer.node
 fi
 

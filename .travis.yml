@@ -1,0 +1,23 @@
+language: cpp
+
+compiler:
+- gcc
+
+env:
+  matrix:
+  - NODE_NVM_VERSION="0.10"
+  - NODE_NVM_VERSION="0.8"
+
+before_install:
+- export platform=$(uname -s | sed "y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/")
+- git clone https://github.com/creationix/nvm.git ../.nvm
+- source ../.nvm/nvm.sh
+- nvm install $NODE_NVM_VERSION
+- nvm use $NODE_NVM_VERSION
+- node --version
+- npm --version
+
+install:
+- npm install
+
+script:

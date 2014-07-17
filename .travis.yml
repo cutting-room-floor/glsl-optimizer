@@ -7,9 +7,11 @@ env:
   matrix:
   - NODE_NVM_VERSION="0.10"
   - NODE_NVM_VERSION="0.8"
+  global:
+  - secure: "C/x0gNbCxF/MGcag++/a/vYSLZTVyBvFM9A+KTajYEHR07S/q4AK3cz1rooUnRe5fQ5JlfxG+61ZlzsecQGhd/r7iH5sfWLlJjIQrb+jCoh//EiSY/iNmHqJZqnJ0+/6mT7Tw0eCShiCL50OfhNAem9rSWqcyU3K7EjWQ+u7Lh4="
+  - secure: "fXlIpHVMosYY+B9D/CfwmZ/9N+9+yMkz4puP+LYJb/va1Q4rqtoqyB/hqw3vFHYqpRKM7nyQW4A31pJVoN4kjO+rdA6dcLrWdF2K29SmsoGBI5M13htqailXOQPVV2dBSFdfKygOEQh9foOnzkODA2YSWvpbbwI4ULte8kM4Sns="
 
 before_install:
-- export platform=$(uname -s | sed "y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/")
 - git clone https://github.com/creationix/nvm.git ../.nvm
 - source ../.nvm/nvm.sh
 - nvm install $NODE_NVM_VERSION
@@ -21,3 +23,7 @@ install:
 - npm install
 
 script:
+- npm test
+
+after_success:
+- ./travis/publish.sh

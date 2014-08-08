@@ -123,6 +123,7 @@ Handle<Value> Shader::New(const Arguments& args)
 
 	// Couldn't create the Shader
 	NanThrowError("Invalid arguments");
+	NanReturnUndefined();
 }
 
 //----------------------------------------------------------------------

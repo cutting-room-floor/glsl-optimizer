@@ -14,8 +14,8 @@
   "binary": {
     "module_name" : "glslOptimizer",
     "module_path" : "./lib/",
-    "host"        : "https://mapbox-glsl-optimizer.s3.amazonaws.com",
-    "remote_path" : "./{name}/v{version}",
+    "host"        : "https://mapbox-node-binary.s3.amazonaws.com",
+    "remote_path" : "./{name}/v{version}/",
     "package_name": "{node_abi}-{platform}-{arch}.tar.gz"
   },
   "keywords": [

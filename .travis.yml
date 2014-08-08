@@ -8,8 +8,8 @@ env:
   - NODE_NVM_VERSION="0.10"
   - NODE_NVM_VERSION="0.8"
   global:
-  - secure: "C/x0gNbCxF/MGcag++/a/vYSLZTVyBvFM9A+KTajYEHR07S/q4AK3cz1rooUnRe5fQ5JlfxG+61ZlzsecQGhd/r7iH5sfWLlJjIQrb+jCoh//EiSY/iNmHqJZqnJ0+/6mT7Tw0eCShiCL50OfhNAem9rSWqcyU3K7EjWQ+u7Lh4="
-  - secure: "fXlIpHVMosYY+B9D/CfwmZ/9N+9+yMkz4puP+LYJb/va1Q4rqtoqyB/hqw3vFHYqpRKM7nyQW4A31pJVoN4kjO+rdA6dcLrWdF2K29SmsoGBI5M13htqailXOQPVV2dBSFdfKygOEQh9foOnzkODA2YSWvpbbwI4ULte8kM4Sns="
+  - secure: aBmXrE2toyQGrid6SlHeNjMyL1B85rHRuz7E+HwgILwVKc16twoPe7vK1wTVY/iJiwbSfWfSikRSc/q/mh0KgExesoApingpO7BJpUfd5w1WEupIB6cOs5XmetxUSMVdqtzAelqhmiNma//e1kUf5O8uZJcsAwBbOTinyXUzJYQ=
+  - secure: EIlV+YmFSuoieL/o8Ja/JznTAfHJD7Rnjwy3gt7G2oatImsxg3MBYc1qNO3SIBwMTwJ5HxrIgbZitCz8I71ZOqHtb4fxPjzVStXHHilQM5ZYR5J0ilK0U94x6EWblGazFrgxDLuVZ42M8FpLhrDwSoXJHCvQ2n5+3Y/3wncvL7g=
 
 before_install:
 - export platform=$(uname -s | sed "y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/")

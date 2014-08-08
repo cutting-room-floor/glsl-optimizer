@@ -43,5 +43,11 @@
   "dependencies": {
     "nan": "~1.2.0",
     "node-pre-gyp": "~0.5.19"
+  },
+  "bundledDependencies": [
+      "node-pre-gyp"
+  ],
+  "devDependencies": {
+      "aws-sdk": "~2.0.0-rc.19"
   }
 }

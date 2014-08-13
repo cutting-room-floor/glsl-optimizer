@@ -1,6 +1,6 @@
 {
   "name": "mapbox-glsl-optimizer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "GLSL optimizer",
   "main": "./lib/glslOptimizer.node",
   "scripts": {

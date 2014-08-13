@@ -106,6 +106,8 @@
         'glsl/lower_noise.cpp',
         'glsl/lower_packed_varyings.cpp',
         'glsl/lower_packing_builtins.cpp',
+        'glsl/lower_output_reads.cpp',
+        'glsl/lower_ubo_reference.cpp',
         'glsl/lower_variable_index_to_cond_assign.cpp',
         'glsl/lower_vec_index_to_cond_assign.cpp',
         'glsl/lower_vec_index_to_swizzle.cpp',

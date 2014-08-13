@@ -29,6 +29,7 @@
 #include "loop_analysis.h"
 #include "program/hash_table.h"
 #include <math.h>
+#include <limits>
 
 
 class string_buffer
@@ -1202,6 +1203,18 @@ static void print_float (string_buffer& buffer, float f)
 	posE = strchr(tmp, 'e');
 	if (!posE)
 		posE = strchr(tmp, 'E');
+
+	// snprintf formats infinity as inf.0 or -inf.0, which isn't useful here.
+	// GLSL has no infinity constant so print an equivalent expression instead.
+	if (f == std::numeric_limits<float>::infinity())
+		strcpy(tmp, "(1.0/0.0)");
+
+	if (f == -std::numeric_limits<float>::infinity())
+		strcpy(tmp, "(-1.0/0.0)");
+	
+	// Do similar thing for NaN
+	if (f != f)
+		strcpy(tmp, "(0.0/0.0)");
 
 	#if _MSC_VER
 	// While gcc would print something like 1.0e+07, MSVC will print 1.0e+007 -

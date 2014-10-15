@@ -87,7 +87,7 @@ void Shader::Init(Handle<Object> exports)
 
 //----------------------------------------------------------------------
 
-Handle<Value> Shader::New(const Arguments& args)
+NAN_METHOD(Shader::New)
 {
 	NanScope();
 
@@ -115,7 +115,7 @@ Handle<Value> Shader::New(const Arguments& args)
 					Shader* obj = new Shader(compiler, type, *sourceCode);
 					obj->Wrap(args.This());
 
-					return args.This();
+					NanReturnValue(args.This());
 				}
 			}
 		}

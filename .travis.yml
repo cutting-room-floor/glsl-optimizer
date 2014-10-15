@@ -6,7 +6,7 @@ compiler:
 env:
   matrix:
   - NODE_NVM_VERSION="0.10"
-  - NODE_NVM_VERSION="0.8"
+  - NODE_NVM_VERSION="0.11"
   global:
   - secure: aBmXrE2toyQGrid6SlHeNjMyL1B85rHRuz7E+HwgILwVKc16twoPe7vK1wTVY/iJiwbSfWfSikRSc/q/mh0KgExesoApingpO7BJpUfd5w1WEupIB6cOs5XmetxUSMVdqtzAelqhmiNma//e1kUf5O8uZJcsAwBbOTinyXUzJYQ=
   - secure: EIlV+YmFSuoieL/o8Ja/JznTAfHJD7Rnjwy3gt7G2oatImsxg3MBYc1qNO3SIBwMTwJ5HxrIgbZitCz8I71ZOqHtb4fxPjzVStXHHilQM5ZYR5J0ilK0U94x6EWblGazFrgxDLuVZ42M8FpLhrDwSoXJHCvQ2n5+3Y/3wncvL7g=

@@ -17,6 +17,7 @@ env:
 
 before_install:
 - export platform=$(uname -s | sed "y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/")
+- export PATH=./node_modules/.bin/:$PATH
 - git clone https://github.com/creationix/nvm.git ../.nvm
 - source ../.nvm/nvm.sh
 - nvm install $NODE_NVM_VERSION
@@ -29,6 +30,4 @@ install:
 
 script:
 - npm test
-
-after_success:
 - ./travis/publish.sh

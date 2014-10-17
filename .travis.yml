@@ -3,6 +3,10 @@ language: cpp
 compiler:
 - clang
 
+os:
+- linux
+- osx
+
 env:
   matrix:
   - NODE_NVM_VERSION="0.10"

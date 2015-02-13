@@ -41,8 +41,8 @@
     "test": "tests"
   },
   "dependencies": {
-    "nan": "~1.2.0",
-    "node-pre-gyp": "~0.5.19"
+    "nan": "~1.6.2",
+    "node-pre-gyp": "~0.6.3"
   },
   "bundledDependencies": [
       "node-pre-gyp"
